@@ -1,6 +1,6 @@
 ---
-title: How to detect for bound events in jQuery
-tags: [jquery][javascript]
+title : How to detect bound event handlers in jQuery
+tags : [jquery][javascript]
 ---
 
 One of the great features that jQuery offers is the ability to add and remove events for DOM elements without much fuss.
