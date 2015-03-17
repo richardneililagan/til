@@ -22,7 +22,7 @@ For example, calling `jQuery._data(elem, 'events')` gets you event data one the 
 
 Event data is filed by jQuery as an object with properties corresponding to events.
 
-```
+```javascript
 {
   click : [...],
   hover : [...],
@@ -33,7 +33,7 @@ Event data is filed by jQuery as an object with properties corresponding to even
 Each event property is an array of hashmaps, each containing data jQuery is maintaining
 about a single handler bound to the event.
 
-```
+```javascript
 // :: jQuery._data(elem, 'events').click
 {
   data : ...,
@@ -47,7 +47,7 @@ Using this data, we can do all sorts of checks and filters to determine if an el
 
 For example, to check if `<body>` has any `click` event handlers bound:
 
-```
+```javascript
 var body = jQuery('body');
 // :: note that we're passing in a raw HTML element, not a jQuery-wrapped one
 //    so you could also use document.getElementxxx() functions.
@@ -58,7 +58,7 @@ if ( $._data( body[0], 'events' ).click.length ) {
 
 Or to check if we have any event handlers bound to `click` under a specific namespace:
 
-```
+```javascript
 // :: assuming 
 var body = jQuery('body');
 body.on('click.foo', handler);
